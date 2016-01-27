@@ -9,7 +9,7 @@
 * 支持所有图片列表选择下载(点右上角插件图标)
 
 ## 使用方法
-* git clone https://github.com/huazhiyuan2008/Image_Picker
+* `git clone https://github.com/huazhiyuan2008/Image_Picker`
 * 打开chrome输入`chrome://extensions`
 * 勾选`Developer mode`
 * `Load unpacked extension...`选择工程目录
@@ -21,12 +21,12 @@
 
 ## Ref
 
-[image-picker](https://github.com/bluemirr5/image-picker)
-
-[image-downloader](https://github.com/vdsabev/image-downloader)
-
 [chrome extensions getstarted](https://developer.chrome.com/extensions/getstarted)
 
 [chrome extensions api](https://developer.chrome.com/extensions/api_index)
 
 [Chrome扩展及应用开发](http://www.ituring.com.cn/minibook/950)
+
+[image-picker](https://github.com/bluemirr5/image-picker)
+
+[image-downloader](https://github.com/vdsabev/image-downloader)

@@ -1,11 +1,4 @@
-title: Chrome插件之Image Picker实战
-date: 2016-01-23 13:34:04
-tags:
-
-- 图片采集 
-- chrome
-
----
+# chrome插件之Image Picker实战
 
 ## Chrome Extension Debug
 右上角插件图标右键，点击Inspect Popup。在console面板执行`location.reload(true)`
@@ -112,5 +105,3 @@ chrome.runtime.onMessage.addListener(
 [image-picker](https://github.com/bluemirr5/image-picker)
 
 [image-downloader](https://github.com/vdsabev/image-downloader)
-
-
