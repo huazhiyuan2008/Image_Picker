@@ -7,7 +7,6 @@
  */
 function getClickHandler() {
   return function(info, tab) {
-    // The srcUrl property is only available for image elements.
     console.log("url-->" + info.srcUrl);
     chrome.downloads.download({url: info.srcUrl}, function(id) {
 
@@ -19,8 +18,17 @@ function getClickHandler() {
  * Create a context menu which will only show up for images.
  */
 chrome.contextMenus.create({
-  "title" : "pick image",
+  "title" : "Pick Image",
   "type" : "normal",
   "contexts" : ["image"],
   "onclick" : getClickHandler()
 });
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ? "from a content script:" + sender.tab.url : "from the extension");
+    if (request.action == "download") {
+      chrome.downloads.download({url: request.data}, function(id) {});
+      sendResponse({data: "goodbye"});
+    }
+  });
