@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script type="text/javascript" src="./lib/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="./lib/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/masonry.js"></script>
+    <script type="text/javascript" src="./js/popup.js"></script>
+    <style>
+      body {
+        min-width:453px;
+        min-height:523px;
+        overflow-x:hidden;
+      }
+      img{
+          max-width:300px;
+      }
+      #container { position: 'relative' }
+      /*#imgArea {
+        border:1px solid gray;
+        border-bottom: 0px solid gray;
+      */}
+      .masonry {
+        background: #EEE;
+        max-width: 640px;
+      }
+
+      .masonry .item {
+        min-width:  50px;
+        min-height: 30px;
+        float: left;
+        /*background: #D26;*/
+        border: 1px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.5);
+        border-radius: 5px;
+        margin: 5px 5px 0 0;
+        padding: 3px;
+        text-align: center;
+      }
+
+      #title {
+        width: 100%;
+        text-align: center;
+        color: #7F7F7F;
+      }
+    </style>
+  </head>
+  <body ng-controller="ImageFinderCTRL">
+    <div id="title">
+      <h2>Image Picker</h2>
+      <hr>
+    </div>
+    <div id="container" class="masonry js-masonry"  data-masonry-options='{ "columnWidth": 60 }'>
+      <a ng-href="{{imageInfo.location}}" download="{{imageInfo.fileName}}" ng-repeat="imageInfo in imageArray track by $index" class="item">
+        <div id="imgArea">
+            <img ng-src="{{imageInfo.location}}">
+        </div>
+      </a>
+      <hr/>
+    </div>
+  </body>
+</html>
