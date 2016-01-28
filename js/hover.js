@@ -1,7 +1,7 @@
 var selectedUrl
 var $pickerView
-var MIN_WIDTH = 150
-var MIN_HEIGHT = 150
+var MIN_WIDTH = 200
+var MIN_HEIGHT = 200
 var $body = $('body');
 
 function bigImg(x) {
@@ -15,7 +15,7 @@ function normalImg(x) {
 }
 
 function over_image(e) {
-    if (this.width < MIN_WIDTH && this.height < MIN_HEIGHT) {
+    if (this.width < MIN_WIDTH || this.height < MIN_HEIGHT) {
         return
     }
     if (!e) {
@@ -37,14 +37,13 @@ function over_image(e) {
 }
 
 function out_image(e) {
-    if (this.width < MIN_WIDTH && this.height < MIN_HEIGHT) {
+    if (this.width < MIN_WIDTH || this.height < MIN_HEIGHT) {
         return
     }
     if (!e) {
         e = window.event;
     }
     //console.log(this.src);
-    //alert(this.src)
     $pickerView.css('display', 'none')
     // normalImg(this);
     // btn_move(this, e.clientX, e.clientY);
