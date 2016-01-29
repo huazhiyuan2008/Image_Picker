@@ -27,6 +27,6 @@
     },
     "content_scripts": [{
         "matches": ["http://*/*", "https://*/*"],
-        "js": ["lib/jquery-2.2.0.min.js", "js/hover.js"]
+        "js": ["lib/jquery-2.2.0.min.js", "js/500px_hover.js", "js/hover.js"]
     }]
 }
