@@ -30,5 +30,9 @@ chrome.runtime.onMessage.addListener(
     if (request.action == "download") {
       chrome.downloads.download({url: request.data}, function(id) {});
       sendResponse({data: "goodbye"});
+    } else if (request.action == "tabUrl") {
+      sendResponse({data:sender.tab.url})
+    } else if (request.action == "is500px") {
+      sendResponse({data: sender.tab.url.startsWith('https://500px.com')})
     }
   });

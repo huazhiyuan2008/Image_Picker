@@ -7,6 +7,7 @@
 * 支持鼠标右键Context Menu
 * 支持鼠标hover出现采集按钮
 * 支持所有图片列表选择下载(点右上角插件图标)
+* 支持[500px](https://500px.com/popular)**大图**采集
 
 ## 使用方法
 * `git clone https://github.com/huazhiyuan2008/Image_Picker`
