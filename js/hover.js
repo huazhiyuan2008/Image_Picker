@@ -25,7 +25,7 @@
     if (!e) {
       e = window.event;
     }
-    //console.log(this.src);
+    // console.log(this.src);
     selectedUrl = image.src
     var left = image.getBoundingClientRect().left + $body.scrollLeft() + 0;
     var top = image.getBoundingClientRect().top + $body.scrollTop() + 0;
@@ -41,6 +41,7 @@
   }
 
   function out_image(e) {
+    // console.log("out image");
     if (this.width < MIN_WIDTH || this.height < MIN_HEIGHT) {
       return
     }
@@ -55,7 +56,9 @@
 
   function loadListeners() {
     $body.on('mouseenter', 'img', over_image);
+    $body.on('mouseenter', ':image', over_image);
     $body.on('mouseleave', 'img', out_image);
+    $body.on('mouseleave', ':image', out_image);
   }
 
   function appendPicker() {
